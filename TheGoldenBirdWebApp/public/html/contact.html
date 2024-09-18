@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="/css/contact.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navigation">
+      <a href="#" id="hamburger">
+        <img
+          class="hamburgerIcon"
+          src="icons\hamburger_menu_icon.svg"
+          alt="Hamburger menu icon"
+        />
+      </a>
+      <a href="#" onclick="window.location.href='cart';" id="basket">
+        <span id="basketQuantity">0</span>
+        <img src="icons/shopping_basket_1.svg" alt="shopping basket icon" />
+        <span id="basketPrice">£0.00</span>
+      </a>
+    </nav>
+    <aside class="menuSlider sliderActive hidden">
+      <a class="closeWindow" href="#">
+        <img src="icons\close_window_icon.svg" alt="" />
+      </a>
+      <a href="#" onclick="window.location.href='home';" id="menuSliderHome">
+        Home
+        <span>
+          <img src="icons\home_icon.svg" alt="" />
+        </span>
+      </a>
+      <a href="#" onclick="window.location.href='menu';"
+        >Menu
+        <span>
+          <img src="icons\food_menu_icon.svg" alt="" />
+        </span>
+      </a>
+      <a href="#" onclick="window.location.href='cart';"
+        >Cart
+        <span>
+          <img src="icons\shopping_cart_icon.svg" alt="" />
+        </span>
+      </a>
+      <a href="#"
+        >Contact
+        <span>
+          <img src="icons\contact_icon.svg" alt="" />
+        </span>
+      </a>
+      <a href="#" onclick="window.location.href='signIn';"
+        >Sign in
+        <span>
+          <img src="icons\login_icon.svg" alt="" />
+        </span>
+      </a>
+    </aside>
+    <h1 id="mainHeader">Contact Us</h1>
+    <main class="main">
+      <p>
+        <span>Phone:</span>
+        <a href="tel:01248716684" id="phoneNum">01248-716-684</a>
+      </p>
+      <p>
+        <span>Address:</span>
+        2 Erw Fair, Ffordd Caergybi, Llanfairpwllgwyngyll, Anglesey, LL61 5YQ
+      </p>
+      <img
+        class="iconLoading"
+        width="32"
+        height="32"
+        src="https://img.icons8.com/windows/32/spinner-frame-5.png"
+        alt="spinner-frame-5"
+      />
+      <!-- small -->
+      <iframe
+        class="map hidden"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2388.796269053608!2d-4.2122627233732075!3d53.22150117225331!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4865a979af1b09c5%3A0x5b84abf48b3f10c1!2sGolden%20Bird!5e0!3m2!1sen!2suk!4v1719610366168!5m2!1sen!2suk"
+        width="400"
+        height="300"
+        style="border: 0"
+        allowfullscreen=""
+        loading="eager"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+      <!-- large -->
+      <!-- <iframe
+        class="map"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2388.796269053608!2d-4.2122627233732075!3d53.22150117225331!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4865a979af1b09c5%3A0x5b84abf48b3f10c1!2sGolden%20Bird!5e0!3m2!1sen!2suk!4v1719611339004!5m2!1sen!2suk"
+        width="800"
+        height="600"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe> -->
+    </main>
+    <script src="/js/contact.js"></script>
+  </body>
+</html>

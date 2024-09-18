@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="/css/home.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navigation">
+      <img
+        class="navGoldenBirdIcon"
+        src="icons\golden_bird_main_icon.png"
+        alt="Golden phoenix icon"
+      />
+      <a href="#">
+        <img
+          class="hamburgerIcon"
+          src="icons\hamburger_menu_icon.svg"
+          alt="Hamburger menu icon"
+        />
+      </a>
+    </nav>
+    <section class="imgCarousel">
+      <img
+        id="carouselImg"
+        src="images\carousel1.jpg"
+        alt="Image of Chinese takeaway food"
+      />
+    </section>
+    <main class="main">
+      <h1 id="mainHeading">Welcome</h1>
+      <h4 class="subHeading">to Golden Bird Chinese</h4>
+      <h4 class="subHeading">Takeaway</h4>
+      <img src="images\chinese_letters.png" alt="" />
+      <button
+        type="button"
+        class="mainBtn"
+        onclick="window.location.href='menu';"
+      >
+        Order now
+      </button>
+      <section id="synopsis">
+        <p>
+          Nestled in the charming village of Llanfairpwllgwyngyll, Golden Bird
+          Chinese Takeaway is a beloved local gem known for its authentic
+          flavors and warm hospitality. Located at 2 Erw Fair, Ffordd Caergybi,
+          our family-run establishment has been serving the community with
+          dedication and passion for over fifteen years. <br />
+          Here at Golden Bird, we offer a diverse menu that caters to all
+          tastes, featuring classic dishes like sweet and sour chicken, beef
+          chow mein, and vegetable spring rolls. Each dish is prepared with
+          fresh ingredients and traditional recipes, ensuring a delightful
+          culinary experience. Our takeaway is particularly praised for its
+          crispy aromatic duck and flavorful wonton soup, which have become
+          local favorites. <br />
+          Our commitment to quality and customer satisfaction have earned us a
+          loyal following and a
+          <span>
+            <a
+              href="https://www.tripadvisor.co.uk/Restaurant_Review-g1925973-d8481582-Reviews-Golden_Bird-Llanfairpwllgwyngyll_Anglesey_North_Wales_Wales.html"
+              ,
+              id="tripAdvisorLink"
+            >
+              4.0 rating on Tripadvisor.
+            </a>
+          </span>
+          <br />
+          Whether you&#39;re a regular or a first-time visitor, Golden Bird
+          promises a warm welcome and a delicious meal that will leave you
+          coming back for more.
+        </p>
+      </section>
+      <h4 id="openingTimesHeader">Opening Times:</h4>
+      <p id="openingTimes">
+        Monday: <span class="times">16:30 - 22:00</span> <br />
+        Tuesday: <span class="times" id="closed">Closed</span> <br />
+        Wednesday: <span class="times">16:30 - 22:00</span> <br />
+        Thursday: <span class="times">16:30 - 22:00</span> <br />
+        Friday: <span class="times">16:30 - 22:00</span> <br />
+        Saturday: <span class="times">16:30 - 22:00</span> <br />
+        Sunday: <span class="times">16:30 - 22:00</span> <br />
+        Open All Bank Holidays
+      </p>
+
+      <p id="foodHygieneMessage">
+        Go to
+        <span>
+          <a href="food.gov.uk/ratings" id="foodRatingLink">
+            food.gov.uk/ratings
+          </a>
+        </span>
+        to find out the food hygiene rating of our business.
+      </p>
+    </main>
+    <aside class="menuSlider sliderActive hidden">
+      <a class="closeWindow" href="#">
+        <img src="icons\close_window_icon.svg" alt="" />
+      </a>
+      <a href="#" id="menuSliderHome">
+        Home
+        <span>
+          <img src="icons\home_icon.svg" alt="" />
+        </span>
+      </a>
+      <a href="#" onclick="window.location.href='menu';"
+        >Menu
+        <span>
+          <img src="icons\food_menu_icon.svg" alt="" />
+        </span>
+      </a>
+      <a href="#" onclick="window.location.href='cart';"
+        >Cart
+        <span>
+          <img src="icons\shopping_cart_icon.svg" alt="" />
+        </span>
+      </a>
+      <a href="#" onclick="window.location.href='contact';"
+        >Contact
+        <span>
+          <img src="icons\contact_icon.svg" alt="" />
+        </span>
+      </a>
+      <a href="#" onclick="window.location.href='signIn';"
+        >Sign in
+        <span>
+          <img src="icons\login_icon.svg" alt="" />
+        </span>
+      </a>
+    </aside>
+    <footer id="footer"></footer>
+    <script src="/js/home.js"></script>
+  </body>
+</html>

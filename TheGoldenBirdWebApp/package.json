@@ -1,0 +1,14 @@
+{
+  "name": "the_golden_bird_takeaway",
+  "version": "1.0.0",
+  "description": "A web application for the Golden Bird Chinese takeaway",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "Louis Hall",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
