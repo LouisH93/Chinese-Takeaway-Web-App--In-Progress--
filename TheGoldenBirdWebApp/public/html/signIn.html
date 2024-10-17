@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In</title>
+    <link rel="stylesheet" href="/css/signIn.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navigation">
+      <img
+        class="navGoldenBirdIcon"
+        src="icons\golden_bird_main_icon.png"
+        alt="Golden phoenix icon"
+      />
+      <a href="#" id="hamburger">
+        <img
+          class="hamburgerIcon"
+          src="icons\hamburger_menu_icon.svg"
+          alt="Hamburger menu icon"
+        />
+      </a>
+    </nav>
+    <aside class="menuSlider sliderActive hidden">
+      <a class="closeWindow" href="#">
+        <img src="icons\close_window_icon.svg" alt="" />
+      </a>
+      <a href="#" onclick="window.location.href='home';" id="menuSliderHome">
+        Home
+        <span>
+          <img src="icons\home_icon.svg" alt="" />
+        </span>
+      </a>
+      <a href="#" onclick="window.location.href='menu';"
+        >Menu
+        <span>
+          <img src="icons\food_menu_icon.svg" alt="" />
+        </span>
+      </a>
+      <a href="#" onclick="window.location.href='cart';"
+        >Cart
+        <span>
+          <img src="icons\shopping_cart_icon.svg" alt="" />
+        </span>
+      </a>
+      <a href="#" onclick="window.location.href='contact';"
+        >Contact
+        <span>
+          <img src="icons\contact_icon.svg" alt="" />
+        </span>
+      </a>
+      <a href="#" 
+        >Sign in
+        <span>
+          <img src="icons\login_icon.svg" alt="" />
+        </span>
+      </a>
+    </aside>
+    <a href="#" onclick="window.location.href='signIn';" class="pageBack hidden">
+      <img src="icons/arrow_back_icon.svg" alt="" />
+      <span>Back</span>
+    </a>
+    <h1 id="mainHeader">Sign in</h1>
+    <p id="createNotice">
+      Don't have an account? <span><a href="#" id="create">create one</a></span>
+    </p>
+    <main>
+      <form id="formLogin">
+        <p class="requiredNotice">
+          <span class="required">*</span> Required fields
+        </p>
+        <label for="username">
+          Username: <span class="required">*</span>
+        </label>
+        <input
+          class="inputs"
+          type="text"
+          name="username"
+          id="username"
+          placeholder="Enter your username"
+        />
+        <div class="username hidden">
+          <span>Please enter a valid username.</span>
+        </div>
+        <label for="password">
+          Password: <span class="required">*</span>
+        </label>
+        <input
+          class="inputs"
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Enter your password"
+        />
+        <div class="password hidden">
+          <span> Please enter a valid password. </span>
+          <br />
+          <span>
+            Password must:</span>
+          </span>
+          <ul>
+            <li>be at least 8 characters long</li>
+            <li>contain at least one lower case character</li>
+            <li>contain at least one upper case character</li>
+            <li>contain at least one digit</li>
+            <li>contain at least one special character `¬!"£$%^&*</li>
+          </ul>
+        </div>
+        <label for="password2">
+          Confirm password: <span class="required">*</span>
+        </label>
+        <input
+          class="inputs"
+          type="password"
+          name="password2"
+          id="password2"
+          placeholder="Re-enter your password"
+        />
+        <div class="password2 hidden">
+          <span>Passwords don't match.</span>
+        </div>
+        
+        <a id="passwordForgotten" href="#">Forgot your password?</a>
+        <button class="btn" type="submit">Sign in</button>
+      </form>
+      <form class="formCreate hidden">
+        <p class="requiredNotice">
+          <span class="required">*</span> Required fields
+        </p>
+        <label for="createUsername">
+          Username: <span class="required">*</span>
+        </label>
+        <input
+          class="inputs"
+          type="text"
+          name="createUsername"
+          id="createUsername"
+          placeholder="Enter username"
+        />
+        <div class="createUsername hidden">
+          <span>Please enter a valid username.</span>
+        </div>
+        <label for="createUsername2">
+          Confirm username: <span class="required">*</span>
+        </label>
+        <input
+          class="inputs"
+          type="text"
+          name="createUsername2"
+          id="createUsername2"
+          placeholder="Re-enter username"
+        />
+        <div class="createUsername2 hidden">
+          <span>Usernames don't match.</span>
+        </div>
+        <label for="createPassword">
+          Password: <span class="required">*</span>
+        </label>
+        <input
+          class="inputs"
+          type="password"
+          name="createPassword"
+          id="createPassword"
+          placeholder="Enter password"
+        />
+        <div class="createPassword hidden">
+          <span>Please enter a valid password.</span>
+          <span>Password must:</span>
+          <ul>
+            <li>be at least 8 characters long</li>
+            <li>contain at least one lower case character</li>
+            <li>contain at least one upper case character</li>
+            <li>contain at least one digit</li>
+            <li>contain at least one special character `¬!"£$%^&*</li>
+          </ul>
+        </div>
+        <label for="createPassword2">
+          Confirm password: <span class="required">*</span>
+        </label>
+        <input
+          class="inputs"
+          type="password"
+          name="createPassword2"
+          id="createPassword2"
+          placeholder="Re-enter your password"
+        />
+        <div class="createPassword2 hidden">
+          <span>Passwords don't match.</span>
+        </div>
+        <button class="btn" type="submit">Create account</button>
+      </form>
+    </main>
+    <script src="/js/signIn.js"></script>
+  </body>
+</html>

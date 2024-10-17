@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart</title>
+    <link rel="stylesheet" href="/css/cart.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navigation">
+      <img
+        class="navGoldenBirdIcon"
+        src="icons\golden_bird_main_icon.png"
+        alt="Golden phoenix icon"
+      />
+      <a href="#">
+        <img
+          class="hamburgerIcon"
+          src="icons\hamburger_menu_icon.svg"
+          alt="Hamburger menu icon"
+        />
+      </a>
+    </nav>
+    <aside class="menuSlider sliderActive hidden">
+      <a class="closeWindow" href="#">
+        <img src="icons\close_window_icon.svg" alt="" />
+      </a>
+      <a href="#" onclick="window.location.href='home';" id="menuSliderHome">
+        Home
+        <span>
+          <img src="icons\home_icon.svg" alt="" />
+        </span>
+      </a>
+      <a href="#" onclick="window.location.href='menu';"
+        >Menu
+        <span>
+          <img src="icons\food_menu_icon.svg" alt="" />
+        </span>
+      </a>
+      <a href="#"
+        >Cart
+        <span>
+          <img src="icons\shopping_cart_icon.svg" alt="" />
+        </span>
+      </a>
+      <a href="#" onclick="window.location.href='contact';"
+        >Contact
+        <span>
+          <img src="icons\contact_icon.svg" alt="" />
+        </span>
+      </a>
+      <a href="#" onclick="window.location.href='signIn';"
+        >Sign in
+        <span>
+          <img src="icons\login_icon.svg" alt="" />
+        </span>
+      </a>
+    </aside>
+    <h2 id="mainHeading">Your Order</h2>
+    <main class="main"></main>
+    <script src="/js/cart.js"></script>
+  </body>
+</html>

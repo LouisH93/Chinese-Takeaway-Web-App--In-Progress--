@@ -1,0 +1,365 @@
+* {
+  margin: 0%;
+  /* overflow-x: hidden; */
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+}
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  max-width: 100%;
+  min-height: 5rem;
+  background: #f5f5f0;
+  z-index: 1;
+}
+.navigation a img {
+  margin-right: 0.7rem;
+}
+img {
+  max-width: 100%;
+}
+.navigation img {
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+  padding: 0.2rem;
+}
+.sliderActive {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  /* padding: 1rem; */
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-weight: 300;
+  background: #f5f5f0;
+  z-index: 10;
+}
+.closeWindow > img {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.menuSlider a:not(.closeWindow) {
+  position: relative;
+  line-height: 2rem;
+  color: black;
+  text-decoration: none;
+  margin-bottom: 1.5rem;
+}
+.menuSlider a:nth-child(2) {
+  margin-top: 8rem;
+}
+.menuSlider img:not(.closeWindow > img) {
+  position: absolute;
+  bottom: 0.2rem;
+  margin-left: 0.6rem;
+}
+h1 {
+  margin: 2rem auto 0rem auto;
+  font-weight: 300;
+}
+main {
+  margin: 2rem 1.5rem 1rem 1.5rem;
+  background: #f5f5f0;
+}
+#formLogin {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  margin: 0.5rem;
+  padding: 0.8rem;
+  background: white;
+}
+.formCreate {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  margin: 0.5rem;
+  padding: 0.8rem;
+  background: white;
+  position: relative;
+}
+.pageBack {
+  margin: 1.5rem 0rem 0rem 1rem;
+  position: relative;
+}
+.pageBack > span {
+  position: absolute;
+  top: 2.7rem;
+  left: 0.6rem;
+  color: black;
+  text-decoration: underline;
+  text-decoration-color: black;
+  font-size: 0.9em;
+}
+#createNotice {
+  margin: 3rem auto 0rem auto;
+  font-size: 0.9em;
+}
+#createNotice > span > a {
+  color: black;
+}
+label {
+  margin-bottom: 0.3rem;
+}
+label:nth-child(1) {
+  margin-top: 1rem;
+}
+label:not(:nth-child(1)) {
+  margin-top: 2rem;
+}
+.required {
+  color: red;
+}
+input {
+  padding: 0.3rem;
+  width: 90%;
+}
+input:placeholder-shown {
+  font-style: italic;
+}
+.requiredNotice,
+label,
+input,
+.username,
+.password,
+.password2,
+.createUsername,
+.createUsername2,
+.createPassword,
+.createPassword2 {
+  margin-left: 5%;
+  margin-right: 5%;
+  font-size: 0.8999999em;
+}
+#passwordForgotten {
+  font-size: 0.9em;
+  color: black;
+  margin: 2.5rem auto 1.5rem auto;
+}
+.btn {
+  min-width: 8rem;
+  padding: 0.8rem;
+  margin: 2rem auto;
+  border-radius: 100px;
+  border-style: none;
+  background: #41a934;
+  color: white;
+  position: relative;
+}
+.btn:hover {
+  transform: translateY(-3px);
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+.btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 1px 20px rgba(0, 0, 0, 0.3);
+}
+.btn::after {
+  content: "";
+  background: linear-gradient(green, #42c94b);
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  transition: all 0.4s;
+}
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+.inputs:focus {
+  outline: none;
+}
+.validatedTick {
+  color: green;
+}
+.hidden {
+  display: none;
+}
+
+@media (min-width: 450px) {
+  * {
+    box-sizing: border-box;
+  }
+  main {
+    margin: 2rem 2rem 5rem 2rem;
+  }
+  input {
+    width: 80%;
+  }
+  .requiredNotice,
+  label,
+  input,
+  .username,
+  .password,
+  .password2,
+  .createUsername,
+  .createUsername2,
+  .createPassword,
+  .createPassword2 {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  *:not(#mainHeader) {
+    font-size: 1em;
+  }
+}
+
+@media screen and (min-width: 550px) {
+  main {
+    margin: 2rem 4rem 5rem 4rem;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  main {
+    margin: 2rem 6rem 5rem 6rem;
+  }
+  input {
+    width: 75%;
+  }
+  .requiredNotice,
+  label,
+  input,
+  .username,
+  .password,
+  .password2,
+  .createUsername,
+  .createUsername2,
+  .createPassword,
+  .createPassword2 {
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+  }
+}
+
+@media (min-width: 800px) {
+  .navigation img {
+    margin-left: 1.7rem;
+  }
+  .navigation a img {
+    margin-right: 1.7rem;
+  }
+  .closeWindow > img {
+    top: 1rem;
+    right: 2.5rem;
+  }
+  .menuSlider a:not(.closeWindow) {
+    text-align: center;
+    font-size: 1.1em;
+  }
+  .menuSlider a:not(.closeWindow):hover {
+    text-decoration: underline;
+    text-decoration-color: black;
+    letter-spacing: 0.0323411rem;
+  }
+  .pageBack {
+    position: absolute;
+    top: 12.5%;
+    left: 7.5%;
+  }
+  main {
+    margin: 2rem 8rem 5rem 8rem;
+  }
+  #mainHeader {
+    font-size: 2.5em;
+  }
+  #createNotice,
+  .requiredNotice,
+  label,
+  input,
+  .username,
+  .password,
+  .password2,
+  .createUsername,
+  .createUsername2,
+  .createPassword,
+  .createPassword2,
+  #passwordForgotten,
+  .btn,
+  .pageBack > span,
+  .menuSlider a:not(.closeWindow) {
+    font-size: 1.1em;
+  }
+  #formLogin {
+    margin: 0.8rem;
+  }
+  input {
+    width: 65%;
+  }
+  .requiredNotice,
+  label,
+  input,
+  .username,
+  .password,
+  .password2,
+  .createUsername,
+  .createUsername2,
+  .createPassword,
+  .createPassword2 {
+    margin-left: 17.5%;
+    margin-right: 17.5%;
+  }
+}
+
+@media screen and (width > 1000px) {
+  .pageBack > span {
+    text-decoration: none;
+  }
+  .pageBack > span:hover {
+    text-decoration: underline;
+    text-decoration-color: black;
+    letter-spacing: 0.0323411rem;
+  }
+  #createNotice > span > a {
+    text-decoration: none;
+  }
+  #createNotice > span > a:hover {
+    text-decoration: underline;
+    text-decoration-color: black;
+    letter-spacing: 0.0323411rem;
+  }
+  #passwordForgotten {
+    text-decoration: none;
+  }
+  #passwordForgotten:hover {
+    text-decoration: underline;
+    text-decoration-color: black;
+    letter-spacing: 0.0323411rem;
+  }
+  input {
+    width: 50%;
+    padding: 0.4rem;
+  }
+  .requiredNotice,
+  label,
+  input,
+  .username,
+  .password,
+  .password2,
+  .createUsername,
+  .createUsername2,
+  .createPassword,
+  .createPassword2 {
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+}

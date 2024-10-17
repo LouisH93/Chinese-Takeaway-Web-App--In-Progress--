@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout</title>
+    <link rel="stylesheet" href="/css/checkout.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navigation">
+      <a href="#" id="hamburger">
+        <img
+          class="hamburgerIcon"
+          src="icons\hamburger_menu_icon.svg"
+          alt="Hamburger menu icon"
+        />
+      </a>
+      <a href="#" onclick="window.location.href='cart';" id="basket">
+        <span id="basketQuantity">0</span>
+        <img src="icons/shopping_basket_1.svg" alt="shopping basket icon" />
+        <span id="basketPrice">£0.00</span>
+      </a>
+    </nav>
+    <aside class="menuSlider sliderActive hidden">
+      <a class="closeWindow" href="#">
+        <img src="icons\close_window_icon.svg" alt="" />
+      </a>
+      <a href="#" onclick="window.location.href='home';" id="menuSliderHome">
+        Home
+        <span>
+          <img src="icons\home_icon.svg" alt="" />
+        </span>
+      </a>
+      <a href="#" onclick="window.location.href='menu';"
+        >Menu
+        <span>
+          <img src="icons\food_menu_icon.svg" alt="" />
+        </span>
+      </a>
+      <a href="#" onclick="window.location.href='cart';"
+        >Cart
+        <span>
+          <img src="icons\shopping_cart_icon.svg" alt="" />
+        </span>
+      </a>
+      <a href="#" onclick="window.location.href='contact';"
+        >Contact
+        <span>
+          <img src="icons\contact_icon.svg" alt="" />
+        </span>
+      </a>
+      <a href="#" onclick="window.location.href='signIn';"
+        >Sign in
+        <span>
+          <img src="icons\login_icon.svg" alt="" />
+        </span>
+      </a>
+    </aside>
+    <h1 id="mainHeader">Checkout</h1>
+    <p class="notice">Collection Only</p>
+    <p class="notice">Cash Only</p>
+    <p class="notice">Last Pick Up - 22:00 PM</p>
+    <main>
+      <section>
+        <h3 id="summaryHeading">Order Summary</h3>
+        <a href="#/" id="seeMore">
+          <img src="icons/arrow_drop_down_icon.svg" alt="" id="arrowDownIcon" />
+        </a>
+        <div class="orderSummary hidden"></div>
+      </section>
+      <form id="form">
+        <label for="name">Name: </label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Enter your name"
+          required
+        />
+        <span id="nameMessage"></span>
+        <label for="email">Email: </label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Enter your email"
+          required
+        />
+        <span></span>
+        <label for="email2" id="email2Label">Confirm email: </label>
+        <input
+          type="email"
+          name="email2"
+          id="email2"
+          placeholder="Re-enter your email"
+          required
+        />
+        <span></span>
+        <label for="pickup" id="pickupLabel">Pick Up Time: </label>
+        <input
+          type="time"
+          name="pickup"
+          id="pickup"
+          min="16:30"
+          max="22:00"
+          value="16:30"
+          required
+        />
+        <span></span>
+        <button type="submit" id="confirmBtn">Confirm Order</button>
+      </form>
+    </main>
+    <script src="/js/checkout.js"></script>
+  </body>
+</html>

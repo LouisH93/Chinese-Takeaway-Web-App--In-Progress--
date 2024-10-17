@@ -1,0 +1,10 @@
+[
+  { "userId": 0, "email": "alice@hotmail.com", "password": "!PassWoRd" },
+  { "id": 1, "email": "amy_burrows@hotmail.com", "password": "$$Coopie$$" },
+  {
+    "id": 2,
+    "username": "luis_hall@hotmail.com",
+    "password": "louisH1993!",
+    "password2": "louisH1993!"
+  }
+]

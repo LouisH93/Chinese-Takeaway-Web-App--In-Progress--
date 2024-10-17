@@ -1,0 +1,286 @@
+* {
+  margin: 0%;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+}
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  max-width: 100%;
+  min-height: 5rem;
+  background: #f5f5f0;
+  z-index: 1;
+}
+.navigation a img {
+  margin-right: 0.7rem;
+}
+img {
+  max-width: 100%;
+}
+.navigation img {
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+  padding: 0.2rem;
+}
+.sliderActive {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-weight: 300;
+  background: #f5f5f0;
+  z-index: 10;
+}
+.closeWindow > img {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.menuSlider a:not(.closeWindow) {
+  position: relative;
+  line-height: 2rem;
+  color: black;
+  text-decoration: none;
+}
+.menuSlider a:nth-child(2) {
+  margin-top: 8rem;
+}
+.menuSlider a:not(.closeWindow) {
+  margin-bottom: 1.5rem;
+}
+.menuSlider img:not(.closeWindow > img) {
+  position: absolute;
+  bottom: 0.2rem;
+  margin-left: 0.6rem;
+}
+.hidden {
+  display: none;
+}
+#mainHeading {
+  margin: 3rem auto 1.7rem auto;
+  font-weight: 350;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  margin: 0rem 1rem 1rem 1rem;
+  background: #f5f5f0;
+}
+#orderItemSection {
+  display: flex;
+  flex-direction: column;
+  text-align: flex-start;
+  max-width: 100%;
+  margin: 0.5rem 0.5rem 0rem 0.5rem;
+  background: white;
+  min-height: 15vh;
+  position: relative;
+}
+#orderItemSection:nth-last-child(1) {
+  margin-bottom: 0.5rem;
+}
+.sectionParagraph {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-family: inherit;
+  font-size: 0.92254524352em;
+  font-weight: 380;
+}
+.quantityBtnRight {
+  height: 2.3432322rem;
+  min-width: 2.565879rem;
+  padding: 0.7rem;
+  background: #41a934;
+  border-style: none;
+  border-top-left-radius: 4.2857142857rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
+}
+.quantityBtnLeft {
+  height: 2.2432322rem;
+  min-width: 2.565879rem;
+  padding: 0.7rem;
+  background: red;
+  border-style: none;
+  border-top-right-radius: 4.3857142857rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  cursor: pointer;
+}
+.removeLink {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 50%;
+  transform: translate(-50%);
+  font-family: inherit;
+  font-size: 0.9em;
+  font-weight: 500;
+  color: #668cff;
+  cursor: pointer;
+}
+#sauceSelect {
+  width: 9rem;
+  height: 2rem;
+  font-family: inherit;
+  font-weight: 300;
+  margin-left: 0.5rem;
+  margin-bottom: 4rem;
+  cursor: pointer;
+}
+#canSelect {
+  width: 9rem;
+  height: 2rem;
+  font-family: inherit;
+  font-weight: 300;
+  margin-bottom: 4rem;
+  cursor: pointer;
+}
+.checkoutBtn:hover {
+  cursor: pointer;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+.checkoutBtn:active {
+  transform: translateY(1.5px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+.checkoutBtn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+.quantityBtnLeft:active {
+  box-shadow: -4px 4px 4px red;
+}
+.quantityBtnRight:active {
+  box-shadow: 4px 4px 4px #41a934;
+}
+#totalDiv {
+  padding: 0.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.1111328746274em;
+  background: #f5f5f0;
+}
+#divParagraph {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: white;
+  padding: 0.9rem;
+}
+#checkoutBtn {
+  min-width: 8rem;
+  padding: 1rem;
+  margin: 2rem auto 5rem auto;
+  border-radius: 100px;
+  border-style: none;
+  font-family: inherit;
+  font-weight: 400;
+  background: linear-gradient(#f6c90e, #ffd523);
+}
+
+@media screen and (min-width: 450px) {
+  main,
+  #totalDiv {
+    margin: 0rem 2.5rem 1rem 2.5rem;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  main,
+  #totalDiv {
+    margin: 0rem 4rem 1rem 4rem;
+  }
+  body > *:not(#mainHeading) {
+    font-size: 1.1em;
+  }
+  #mainHeading {
+    font-size: 2.5em;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .navigation img {
+    margin-left: 1.7rem;
+  }
+  .navigation a img {
+    margin-right: 1.7rem;
+  }
+  .closeWindow > img {
+    top: 1rem;
+    right: 2.5rem;
+  }
+  .menuSlider a:not(.closeWindow) {
+    text-align: center;
+    font-size: 1.1em;
+  }
+  .menuSlider a:not(.closeWindow):hover {
+    text-decoration: underline;
+    text-decoration-color: black;
+    letter-spacing: 0.0323411rem;
+  }
+  main,
+  #totalDiv {
+    margin: 0rem 6rem 1rem 6rem;
+  }
+  #orderItemSection {
+    margin: 1rem 1rem 0rem 1rem;
+  }
+  #orderItemSection:nth-last-child(1) {
+    margin-bottom: 1rem;
+  }
+  #totalDiv {
+    padding: 1rem;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  main,
+  #totalDiv {
+    margin: 0rem 7rem 1rem 7rem;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  main,
+  #totalDiv {
+    margin: 0rem 12rem 1rem 12rem;
+  }
+}
+
+@media screen and (min-width: 1150px) {
+  main,
+  #totalDiv {
+    margin: 0rem 20rem 1rem 20rem;
+  }
+  *:not(#mainHeading, #sauceSelect, #canSelect) {
+    font-size: 1em;
+  }
+  #divParagraph {
+    font-size: 1.3em;
+  }
+  #divSpan {
+    font-size: 1em;
+  }
+}
